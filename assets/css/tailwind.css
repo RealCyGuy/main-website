@@ -8,10 +8,6 @@
   }
 }
 
-html {
-  @apply scroll-smooth;
-}
-
 body {
   @apply md:!static md:!overflow-y-auto w-full;
 }
