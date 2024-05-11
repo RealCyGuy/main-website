@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-slate-900 text-pink-400 min-h-screen overflow-x-hidden selection:bg-pink-400 selection:bg-opacity-40"
+    class="bg-slate-900 text-pink-400 min-h-screen overflow-hidden selection:bg-pink-400 selection:bg-opacity-40"
   >
     <div
       :style="[mounted ? '' : 'display: none']"
