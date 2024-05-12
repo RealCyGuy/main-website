@@ -7,7 +7,7 @@
       class="min-h-screen flex flex-col"
     >
       <NavBar />
-      <div class="mx-5 min-[400px]:mx-8 sm:mx-12 md:mx-20 mt-8 md:mt-16 flex-1">
+      <div class="auto-mx mt-8 md:mt-16 flex-1">
         <slot />
       </div>
       <Footer />

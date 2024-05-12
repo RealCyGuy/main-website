@@ -6,6 +6,10 @@
   h1 {
     @apply text-5xl font-black;
   }
+
+  .auto-mx {
+    @apply mx-5 min-[400px]:mx-8 sm:mx-12 md:mx-20;
+  }
 }
 
 body {
