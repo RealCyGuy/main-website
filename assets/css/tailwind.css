@@ -17,5 +17,5 @@ body {
 }
 
 * {
-  @apply focus-visible:outline-dashed outline-1 outline-pink-400/90 outline-offset-2;
+  @apply focus-visible:outline-dashed outline-1 outline-primary/90 outline-offset-2;
 }
