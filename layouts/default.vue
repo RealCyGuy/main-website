@@ -3,7 +3,9 @@
     class="bg-background text-text min-h-screen selection:bg-primary selection:bg-opacity-40"
   >
     <div>
-      <main class="min-h-screen flex flex-col z-10 bg-background relative">
+      <main
+        class="min-h-screen flex flex-col z-10 bg-background relative rounded-b-3xl"
+      >
         <NavBar />
         <div class="flex-1 pb-10">
           <slot />

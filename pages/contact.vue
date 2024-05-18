@@ -1,5 +1,5 @@
 <template>
-  <div class="auto-mx pb-10">
+  <div class="auto-mx">
     <h1 class="title mb-5">Contact</h1>
     <h2 class="mb-7">
       To reach me, you can try messaging on one of my
