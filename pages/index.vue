@@ -1,131 +1,146 @@
 <template>
   <div>
-    <h1 class="text-5xl font-black">
-      <span class="hello">Hello</span>
-      <span id="words"
-        ><span>, </span><span>I </span><span>am </span>
-        <span
-          class="title bg-gradient-to-r from-[#9762eb] to-[#e49ef1] inline-block text-transparent bg-clip-text"
-        >
-          Cyrus Yip</span
-        ><span>.</span>
-      </span>
-    </h1>
-    <div
-      id="content"
-      class="text-xl sm:text-2xl lg:text-3xl flex flex-col mt-10 gap-8"
-    >
-      <span
-        >I was born at a very, very young age. In fact, I was one of the
-        youngest living things during that time.</span
-      >
-      <div>
-        <span
-          >Here are 4 random selections out of {{ projects.length }}
-          <SimpleLink to="/projects">projects</SimpleLink> I've created.</span
-        >
+    <section class="h-screen relative">
+      <div class="w-full h-full md:w-2/3 absolute right-0 flex">
+        <canvas id="canvas3d" class="h-full w-full relative opacity-0"></canvas>
+      </div>
+      <div class="absolute left-0 bottom-0 w-full">
+        <div class="flex justify-between md:text-4xl px-5">
+          <span>Develop</span>
+          <span>Design</span>
+          <span>Word 3</span>
+        </div>
         <div
-          class="text-sm sm:text-base lg:text-lg grid 2xl:grid-cols-2 gap-2 mt-2"
+          class="text-9xl md:text-[10rem] lg:text-[12rem] leading-none whitespace-nowrap overflow-x-clip"
         >
-          <div
-            v-for="project in projects.slice(0, 4)"
-            class="flex flex-col px-3 py-2 gap-1"
-          >
-            <span>
-              <SimpleLink
-                :to="'/projects#' + project.title"
-                class="font-bold"
-                >{{ project.title }}</SimpleLink
-              >
-              made with
+          <div class="name-container">
+            <div class="names flex">
+              <h1 class="px-5 lg:px-10" ref="first">Cyrus Yip</h1>
               <span
-                v-for="(tag, index) in project.tags.sort((a, b) =>
-                  a.localeCompare(b),
-                )"
+                class="px-5 lg:px-10"
+                aria-hidden="true"
+                v-for="index in 10"
+                :key="index"
+                >Cyrus Yip</span
               >
-                <span>
-                  {{ tag.replace(" ", "&nbsp;") }}
-                </span>
-                <span
-                  v-if="
-                    index < project.tags.length - 1 && project.tags.length > 2
-                  "
-                  >,
-                </span>
-                <span v-if="index == project.tags.length - 2"> and </span>
-              </span>
-              in {{ new Date(project.date).getUTCFullYear() }}.
-            </span>
-            <span class="opacity-90">{{ project.description }}</span>
+            </div>
           </div>
         </div>
       </div>
-      <span
-        >You can also reach me and view my other stuff in my
-        <SimpleLink to="/social">social links</SimpleLink>. Also,
-        <SimpleLink to="/square">square</SimpleLink>?</span
-      >
-      <span
-        >Feel free to
-        <span class="inline-block overflow-clip">
-          <NuxtLink
-            class="relative bg-gradient-to-br from-[#9762eb] to-[#e49ef1] text-slate-900 hover:text-opacity-80 hover:text-white focus:text-opacity-80 focus:text-white px-3 py-1.5 sm:px-6 sm:py-3 rounded-[40px] inline-block z-10 font-bold duration-500 hover:rounded-none focus:rounded-none transition-all"
-            to="contact"
-            >contact me</NuxtLink
-          ></span
-        >. (I even made it a button!)</span
-      >
-    </div>
+    </section>
+    <section class="pt-24 auto-mx">
+      <Split
+        text="I was born at a very, very young age. In fact, I was one of the youngest living things during that time."
+        class="intro-text text-2xl sm:text-3xl md:text-5xl flex-1 max-w-prose md:leading-tight"
+      />
+    </section>
   </div>
 </template>
 
 <script setup lang="ts">
-import { timeline, stagger, spring } from "motion";
-
-import type { Project } from "@/types";
+import { Application } from "@splinetool/runtime";
 
 useServerSeoMeta({
   description:
     "Cyrus Yip's personal website. I made this website with Nuxt 3 👍.",
 });
 
-const { data } = await useAsyncData("projects", () =>
-  queryContent<Project>("projects").find(),
-);
-
-const { data: projects } = await useAsyncData("randomprojects", () =>
-  Promise.resolve(data.value!.sort(() => 0.5 - Math.random())),
-);
 const m = useState("mounted", () => false);
 
+const { $gsap, $ScrollTrigger } = useNuxtApp();
+let app: Application | null = null;
+const first = ref<HTMLElement | null>(null);
+
+function setup() {
+  $gsap.killTweensOf(".names");
+
+  $gsap.fromTo(
+    ".names",
+    { x: 0 },
+    {
+      x: -first.value!.clientWidth,
+      ease: "none",
+      duration: 6,
+      repeat: -1,
+    },
+  );
+}
+
 onMounted(() => {
+  handleAnimation();
+
+  const tl = $gsap.timeline({
+    defaults: { ease: "power3.out" },
+  });
+  tl.from(".names span", {
+    y: "50%",
+    stagger: 0.3,
+    duration: 0.5,
+    ease: "power1.in",
+  });
+
+  $gsap.to(".names", {
+    x: -first.value!.clientWidth,
+    ease: "none",
+    duration: 6,
+    repeat: -1,
+  });
+
+  let resizeTimer: NodeJS.Timeout;
+  addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      setup();
+    }, 100);
+  });
+
+  $gsap.to(".name-container", {
+    x: "-50%",
+    scrollTrigger: {
+      trigger: ".names",
+      start: "bottom bottom",
+      end: "top top",
+      scrub: true,
+    },
+  });
+
+  $gsap.from(".intro-text span", {
+    y: "50%",
+    opacity: 0,
+    stagger: 0.1,
+    scrollTrigger: {
+      trigger: ".intro-text",
+      start: "bottom bottom",
+      end: "bottom 80%",
+      scrub: true,
+    },
+  });
+
+  const canvas = document.getElementById("canvas3d")! as HTMLCanvasElement;
+  app = new Application(canvas);
+  app
+    .load("https://prod.spline.design/SF3SvGwvtSuhzyIm/scene.splinecode")
+    .then(() => {
+      $gsap.to(canvas, { opacity: 1, duration: 0.5, delay: 0.5 }).then(() => {
+        $gsap.to("#canvas3d", {
+          opacity: 0.1,
+          scrollTrigger: {
+            trigger: ".names",
+            start: "bottom bottom",
+            end: "top top",
+            scrub: true,
+          },
+        });
+      });
+    });
+
   if (m.value) return;
   m.value = true;
+});
 
-  timeline([
-    [".hello", { color: ["white", "inherit"] }, { duration: 1.5, delay: 0.8 }],
-    [
-      "#words span",
-      { opacity: [0, 1] },
-      { duration: 0.8, delay: stagger(0.15), at: "-0.5" },
-    ],
-    [".title", { color: ["inherit", "transparent"] }, { duration: 3 }],
-    [
-      "#content>span, #content>div>span, #content>div>div>div",
-      { opacity: [0, 1], x: [-40, 0] },
-      { duration: 1.5, delay: stagger(0.2), easing: spring(), at: "<" },
-    ],
-    [
-      "nav ol a",
-      { y: [-100, 0] },
-      { duration: 1, delay: stagger(0.1), at: "-1" },
-    ],
-    [
-      "nav>a, nav button",
-      { opacity: [0, 1] },
-      { duration: 1, delay: stagger(0.5), at: "<" },
-    ],
-    ["footer", { opacity: [0, 1] }, { at: "-0.2" }],
-  ]);
+onUnmounted(() => {
+  if (app) {
+    app.dispose();
+  }
 });
 </script>

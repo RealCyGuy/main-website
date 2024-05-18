@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="auto-mx">
     <h1 class="title mb-5">Projects</h1>
     <h2 class="mb-3">Here's a list of some things I made.</h2>
     <div class="flex gap-x-2 mb-5 flex-wrap">
@@ -146,4 +146,6 @@ watch(filters, () => {
       }),
   });
 });
+
+onMounted(handleAnimation);
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="pb-10">
+  <div class="auto-mx pb-10">
     <h1 class="title mb-5">Contact</h1>
     <h2 class="mb-7">
       To reach me, you can try messaging on one of my
@@ -52,11 +52,13 @@ function submit(data: Record<string, string>) {
   })
     .then(() => {
       const button = document.querySelector(
-        "[type=submit]"
+        "[type=submit]",
       ) as HTMLButtonElement;
       button.textContent = "Submitted!";
       button.disabled = true;
     })
     .catch((error) => alert(error));
 }
+
+onMounted(handleAnimation);
 </script>

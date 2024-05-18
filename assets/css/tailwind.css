@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @layer base {
-  h1 {
-    @apply text-5xl font-black;
+  .title {
+    @apply text-5xl font-black inline-block mt-28 md:mt-36;
   }
 
   .auto-mx {

@@ -1,6 +1,8 @@
 <template>
   <footer>
-    <div class="py-16 flex justify-center flex-col items-center">
+    <div
+      class="py-16 flex justify-center flex-col items-center h-screen bg-black fixed bottom-0 w-full"
+    >
       <p class="mb-4">
         &copy; {{ year }}
         <SimpleLink to="https://cyrusyip.com">Cyrus Yip</SimpleLink>. All rights

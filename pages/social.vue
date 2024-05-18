@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="auto-mx">
     <h1 class="title mb-5">Social</h1>
     <h2 class="mb-5">
       Here are some links. Categories:
@@ -154,5 +154,8 @@ useServerSeoMeta({
     "Links to Cyrus Yip's social media and developer profiles. Includes GitHub, Stack Overflow, and more.",
 });
 
-onMounted(animateSocial);
+onMounted(() => {
+  animateSocial();
+  handleAnimation();
+});
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="pb-10">
+  <div class="auto-mx pb-10">
     <h1 class="title mb-5">Square<span class="font-normal">?</span></h1>
     <div class="mt-10 mb-14 flex justify-between flex-wrap gap-y-5">
       <p class="text-xl sm:text-2xl flex flex-col">
@@ -109,4 +109,6 @@ function click(event: MouseEvent) {
     waves.value.shift();
   }, 3000);
 }
+
+onMounted(handleAnimation);
 </script>
