@@ -14,7 +14,6 @@ export default function () {
     },
   });
   $gsap.set("nav", { opacity: 1 });
-
   $gsap.to("nav", {
     opacity: 0,
     scrollTrigger: {

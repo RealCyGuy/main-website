@@ -48,5 +48,5 @@ export default defineNuxtConfig({
     defaultLocale: "en",
   },
   devtools: { enabled: true },
-  gsap: { extraPlugins: { scrollTrigger: true, flip: true } },
+  gsap: { extraPlugins: { scrollTrigger: true, flip: true, text: true } },
 });
