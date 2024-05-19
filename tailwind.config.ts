@@ -15,6 +15,7 @@ export default <Partial<Config>>{
         background: "#0c1322",
         text: "#eceef4",
         primary: "#446ada",
+        "primary-bright": "#82a2ff",
       },
     },
   },

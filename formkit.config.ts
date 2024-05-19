@@ -1,16 +1,16 @@
 import { generateClasses } from "@formkit/themes";
 
 const text = {
-  label: "block mb-1 font-bold text-sm",
+  label: "block mb-1 font-bold",
   inner:
-    "border-2 border-pink-400 rounded-lg mb-1 overflow-hidden focus-within:border-pink-300",
+    "border-2 border-primary rounded-lg focus-within:rounded-none mb-1 overflow-hidden focus-within:border-primary-bright duration-500",
   input:
-    "w-full h-10 px-3 border-none text-base text-pink-400 placeholder-slate-400 bg-transparent",
+    "w-full h-10 px-3 border-none text-text placeholder-slate-400 bg-transparent",
 };
 
 const button = {
   input:
-    "py-3 px-8 rounded-full border-2 border-pink-400 hover:bg-pink-400 focus:bg-pink-400 hover:text-white focus:text-white text-pink-400 duration-200 disabled:bg-transparent disabled:text-pink-400",
+    "py-3 px-8 rounded-full border-2 border-primary hover:bg-primary focus:bg-primary text-text duration-200 disabled:bg-transparent disabled:text-primary",
 };
 
 export default {
@@ -28,7 +28,7 @@ export default {
         ...text,
         input:
           text.input +
-          " min-h-[8rem] block w-full h-32 py-2 border-none text-base placeholder-gray-400 focus:shadow-outline",
+          " min-h-[8rem] block w-full h-32 py-2 border-none placeholder-gray-400 focus:shadow-outline",
       },
       submit: {
         ...button,
