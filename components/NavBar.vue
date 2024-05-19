@@ -9,7 +9,7 @@
     </div>
     <div class="flex">
       <ol
-        class="flex fixed h-screen w-screen left-0 top-0 flex-col bg-background md:bg-transparent md:flex-row md:h-auto md:w-auto md:static md:opacity-100 md:visible justify-center list-[decimal-leading-zero] list-inside duration-500 items-center z-10"
+        class="flex fixed h-dvh w-screen left-0 top-0 flex-col bg-background md:bg-transparent md:flex-row md:h-auto md:w-auto md:static md:opacity-100 md:visible justify-center list-[decimal-leading-zero] list-inside duration-500 items-center z-10"
         :class="[toggled ? '' : 'invisible opacity-0 top-[-100%]']"
       >
         <NuxtLink

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="h-screen relative">
+    <section class="h-svh relative">
       <div class="w-full h-full md:w-2/3 absolute right-0 flex">
         <canvas id="canvas3d" class="h-full w-full relative opacity-0"></canvas>
       </div>
