@@ -58,7 +58,13 @@ onMounted(() => {
     repeat: -1,
   });
   ["discuss", "yap", "converse", "chat", "confer", "talk"].forEach((verb) => {
-    tl.to(".verb", { speed: 0.5, text: verb, delay: 1.2 });
+    tl.to(".verb", {
+      text: {
+        value: verb,
+        speed: 1,
+      },
+      delay: 1.2,
+    });
   });
 });
 </script>
