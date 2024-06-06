@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-wrap gap-x-2 sm:gap-x-3">
+  <div class="flex flex-wrap">
     <div v-if="indent" class="w-1/5 hidden md:block"></div>
     <template v-for="word in text.split(' ')">
       <div class="inline-block overflow-hidden">
