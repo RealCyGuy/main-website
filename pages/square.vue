@@ -34,6 +34,12 @@
           :class="clicks < 720 ? 'max-h-0' : 'max-h-16'"
           >Why are you still clicking.</span
         >
+        <span
+          class="inline-block overflow-hidden duration-[2000ms] transition-[max-height]"
+          v-if="clicks > 799"
+          v-for="click in Math.floor((clicks - 700) / 100)"
+          >{{ "?".repeat(click) }}</span
+        >
       </p>
       <div class="flex-1 px-8">
         <div
