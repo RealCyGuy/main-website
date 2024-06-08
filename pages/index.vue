@@ -189,7 +189,7 @@ import type { Project } from "@/types";
 
 useServerSeoMeta({
   description:
-    "Cyrus Yip's personal website. I made this website with Nuxt 3 👍.",
+    "Cyrus Yip's personal website. I am a developer, designer, and word 3.",
 });
 
 const m = useState("mounted", () => false);
