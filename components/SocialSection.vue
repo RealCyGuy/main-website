@@ -1,6 +1,6 @@
 <template>
   <div class="mb-5">
-    <h3 class="pt-2 mb-4" :id="title.toLowerCase().replace(' ', '_')">
+    <h3 class="pt-2 mb-4 opacity-0" :id="title.toLowerCase().replace(' ', '_')">
       {{ title }}
     </h3>
     <div
