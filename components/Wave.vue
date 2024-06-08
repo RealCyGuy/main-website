@@ -6,16 +6,15 @@
 </template>
 
 <script setup lang="ts">
-import { animate } from "motion";
+const { $gsap } = useNuxtApp();
 
 const wave = ref<HTMLDivElement>();
 onMounted(() => {
-  animate(
+  $gsap.fromTo(
     wave.value!,
-    { opacity: [0, 0.2], scale: [0, 1] },
-    { duration: 1.5, easing: "ease-out" }
+    { scale: 0, opacity: 0.2 },
+    { scale: 1, opacity: 0, duration: 1.5, ease: "ease-out" },
   );
-  animate(wave.value!, { opacity: [0.2, 0] }, { duration: 0.5, delay: 1 });
 });
 </script>
 

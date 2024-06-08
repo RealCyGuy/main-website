@@ -154,8 +154,20 @@ useSeoMeta({
     "Links to Cyrus Yip's social media and developer profiles. Includes GitHub, Stack Overflow, and more.",
 });
 
+const { $gsap, $ScrollTrigger } = useNuxtApp();
+
 onMounted(() => {
-  animateSocial();
   handleAnimation();
+  $gsap.from("h3", { opacity: 0, duration: 0.5, delay: 0.5 });
+  $ScrollTrigger.batch(".social-link", {
+    onEnter: (batch) => {
+      $gsap.from(batch, {
+        opacity: 0,
+        y: 20,
+        duration: 0.5,
+        stagger: 0.1,
+      });
+    },
+  });
 });
 </script>

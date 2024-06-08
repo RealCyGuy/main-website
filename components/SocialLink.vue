@@ -1,5 +1,5 @@
 <template>
-  <div class="social-link flex py-1 items-center relative opacity-0">
+  <div class="social-link flex py-1 items-center relative">
     <NuxtLink
       :to="to"
       class="absolute w-full h-full top-0"
