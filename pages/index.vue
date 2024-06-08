@@ -39,7 +39,7 @@
       <section class="py-24 md:py-32 auto-mx mr-10">
         <Split
           text="I was born at a very, very young age. In fact, I was one of the youngest living things during that time."
-          class="intro-text text-5xl sm:text-8xl md:text-9xl lg:text-[10rem] flex-1 max-w-screen-2xl leading-none gap-x-5 sm:gap-x-10"
+          class="intro-text text-5xl sm:text-8xl md:text-9xl lg:text-[10rem] flex-1 max-w-screen-2xl leading-none gap-x-4 sm:gap-x-10"
         />
       </section>
       <section
