@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 useSeoMeta({
-  themeColor: "#f472b6",
+  themeColor: "#446ada",
 });
 
 useSchemaOrg([
