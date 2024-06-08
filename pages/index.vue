@@ -2,7 +2,7 @@
   <div>
     <div class="relative overflow-clip [clip-path:inset(0)]">
       <div
-        class="w-full h-svh fixed left-0 top-0 ml-auto flex z-10 pointer-events-none"
+        class="w-full h-svh fixed left-0 top-0 ml-auto sm:flex z-10 pointer-events-none hidden"
       >
         <div class="h-full w-full md:w-2/3 md:translate-x-1/2">
           <canvas
