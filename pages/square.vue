@@ -68,7 +68,7 @@ useHead({
   title: "Square",
 });
 
-useServerSeoMeta({
+useSeoMeta({
   description: "A spinning square?",
 });
 

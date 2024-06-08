@@ -187,7 +187,7 @@ import { Application } from "@splinetool/runtime";
 
 import type { Project } from "@/types";
 
-useServerSeoMeta({
+useSeoMeta({
   description:
     "Cyrus Yip's personal website. I am a developer, designer, and word 3.",
 });

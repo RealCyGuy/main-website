@@ -75,7 +75,7 @@ useHead({
   title: "Projects",
 });
 
-useServerSeoMeta({
+useSeoMeta({
   description:
     "An extensive list of projects that Cyrus Yip has made. Showcasing his skills in web design, bot development, and more.",
 });

@@ -43,7 +43,7 @@ useHead({
   title: "Contact",
 });
 
-useServerSeoMeta({
+useSeoMeta({
   description: "Contact Cyrus Yip though this form.",
 });
 

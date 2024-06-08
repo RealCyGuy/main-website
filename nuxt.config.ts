@@ -44,7 +44,6 @@ export default defineNuxtConfig({
   site: {
     url: "https://cyrusyip.com",
     name: "Cyrus Yip",
-    description: "Cyrus Yip's personal website.",
     defaultLocale: "en",
   },
   devtools: { enabled: true },

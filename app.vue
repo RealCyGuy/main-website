@@ -5,8 +5,7 @@
 </template>
 
 <script setup lang="ts">
-useServerSeoMeta({
-  ogSiteName: "Cyrus Yip",
+useSeoMeta({
   themeColor: "#f472b6",
 });
 
