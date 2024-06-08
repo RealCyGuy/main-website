@@ -149,7 +149,7 @@ useHead({
   title: "Social",
 });
 
-useServeruseSeoMetaSeoMeta({
+useSeoMeta({
   description:
     "Links to Cyrus Yip's social media and developer profiles. Includes GitHub, Stack Overflow, and more.",
 });
