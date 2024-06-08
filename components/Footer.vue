@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div
-      class="flex flex-col justify-between h-screen bg-black fixed bottom-0 w-full p-5 sm:p-12 md:py-10 md:px-14 lg:py-16 lg:px-20 gap-5"
+      class="flex flex-col justify-between h-dvh bg-black fixed bottom-0 w-full p-5 sm:p-12 md:py-10 md:px-14 lg:py-16 lg:px-20 gap-5"
     >
       <div class="flex flex-col gap-7">
         <div class="text-5xl sm:text-7xl lg:text-9xl flex flex-col lg:block">
