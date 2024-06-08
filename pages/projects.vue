@@ -77,7 +77,7 @@ useHead({
 
 useSeoMeta({
   description:
-    "An extensive list of projects that Cyrus Yip has made. Showcasing his skills in web design, bot development, and more.",
+    "An extensive list of projects that Cyrus Yip has made. Showcases his skills in web design, bot development, and more.",
 });
 
 const { data } = await useAsyncData("projects", () =>

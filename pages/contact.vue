@@ -44,7 +44,8 @@ useHead({
 });
 
 useSeoMeta({
-  description: "Contact Cyrus Yip though this form.",
+  description:
+    "Contact Cyrus Yip though this custom form! (or use something else)",
 });
 
 function submit(data: Record<string, string>) {
