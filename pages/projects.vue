@@ -69,7 +69,7 @@
 <script setup lang="ts">
 import { ProjectStatus, type Project } from "@/types";
 
-const { $gsap, $Flip } = useNuxtApp();
+const { $gsap, $Flip, $ScrollTrigger } = useNuxtApp();
 
 useHead({
   title: "Projects",
@@ -145,6 +145,7 @@ watch(filters, () => {
         ease: "power3.out",
       }),
   });
+  $ScrollTrigger.refresh();
 });
 
 onMounted(handleAnimation);
