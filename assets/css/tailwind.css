@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 @layer base {
-  h1 {
-    @apply text-5xl font-black;
+  .title {
+    @apply text-5xl font-black inline-block mt-28 md:mt-36;
   }
-}
 
-html {
-  @apply scroll-smooth;
+  .auto-mx {
+    @apply mx-5 min-[400px]:mx-8 sm:mx-12 md:mx-20;
+  }
 }
 
 body {
@@ -17,5 +17,5 @@ body {
 }
 
 * {
-  @apply focus-visible:outline-dashed outline-1 outline-pink-400/90 outline-offset-2;
+  @apply focus-visible:outline-dashed outline-1 outline-primary/90 outline-offset-2;
 }

@@ -1,9 +1,13 @@
 <template>
-  <div class="pb-10">
+  <div class="auto-mx">
     <h1 class="title mb-5">Contact</h1>
     <h2 class="mb-7">
-      To reach me, you can try messaging on one of my
-      <SimpleLink to="/social">socials</SimpleLink> or fill out this form below.
+      To reach me, you can email me at
+      <SimpleLink to="mailto:cyrusyip@cyrusyip.com"
+        >cyrusyip@cyrusyip.com</SimpleLink
+      >
+      or try messaging on one of my
+      <SimpleLink to="/social">socials</SimpleLink> or fill out this form below!
     </h2>
     <div class="max-w-3xl">
       <FormKit type="form" netlify @submit="submit" name="contact2">
@@ -39,8 +43,9 @@ useHead({
   title: "Contact",
 });
 
-useServerSeoMeta({
-  description: "Contact Cyrus Yip though this form.",
+useSeoMeta({
+  description:
+    "Contact Cyrus Yip though this custom form! (or use something else)",
 });
 
 function submit(data: Record<string, string>) {
@@ -52,11 +57,13 @@ function submit(data: Record<string, string>) {
   })
     .then(() => {
       const button = document.querySelector(
-        "[type=submit]"
+        "[type=submit]",
       ) as HTMLButtonElement;
       button.textContent = "Submitted!";
       button.disabled = true;
     })
     .catch((error) => alert(error));
 }
+
+onMounted(handleAnimation);
 </script>

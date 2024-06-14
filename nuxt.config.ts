@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     "@formkit/nuxt",
     "nuxt-icon",
     "@nuxtjs/seo",
+    "@hypernym/nuxt-gsap",
   ],
   googleFonts: {
     families: { "Hanken+Grotesk": [400, 700, 900] },
@@ -43,7 +44,8 @@ export default defineNuxtConfig({
   site: {
     url: "https://cyrusyip.com",
     name: "Cyrus Yip",
-    description: "Cyrus Yip's personal website.",
     defaultLocale: "en",
   },
+  devtools: { enabled: true },
+  gsap: { extraPlugins: { scrollTrigger: true, flip: true, text: true } },
 });

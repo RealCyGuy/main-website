@@ -5,9 +5,8 @@
 </template>
 
 <script setup lang="ts">
-useServerSeoMeta({
-  ogSiteName: "Cyrus Yip",
-  themeColor: "#f472b6",
+useSeoMeta({
+  themeColor: "#446ada",
 });
 
 useSchemaOrg([
@@ -16,4 +15,6 @@ useSchemaOrg([
     sameAs: ["https://github.com/realcyguy"],
   }),
 ]);
+
+defineOgImageComponent("Custom");
 </script>

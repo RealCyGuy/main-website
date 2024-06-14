@@ -11,6 +11,12 @@ export default <Partial<Config>>{
         "spin-slow": "spin 8s linear infinite",
         "spin-slow-reverse": "spin 8s linear infinite reverse",
       },
+      colors: {
+        background: "#0c1322",
+        text: "#eceef4",
+        primary: "#446ada",
+        "primary-bright": "#82a2ff",
+      },
     },
   },
   plugins: [formKitTailwind],

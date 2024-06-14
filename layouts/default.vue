@@ -1,23 +1,26 @@
 <template>
   <div
-    class="bg-slate-900 text-pink-400 min-h-screen overflow-x-hidden selection:bg-pink-400 selection:bg-opacity-40"
+    class="bg-background text-text min-h-screen selection:bg-primary selection:bg-opacity-40"
   >
-    <div
-      :style="[mounted ? '' : 'display: none']"
-      class="min-h-screen flex flex-col"
-    >
-      <NavBar />
-      <div class="mx-5 min-[400px]:mx-8 sm:mx-12 md:mx-20 mt-8 md:mt-16 flex-1">
-        <slot />
+    <div>
+      <main
+        class="min-h-screen flex flex-col z-10 bg-background relative rounded-b-3xl"
+      >
+        <NavBar />
+        <div class="flex-1 pb-10">
+          <slot />
+        </div>
+      </main>
+      <div class="h-screen w-full">
+        <Footer />
       </div>
-      <Footer />
       <div
         v-if="!usedTouch"
         id="cursor"
-        class="w-3 h-3 rounded-full fixed bg-pink-200 pointer-events-none duration-100 opacity-0 z-50"
+        class="w-3 h-3 rounded-full fixed bg-primary pointer-events-none duration-100 opacity-0 z-50 top-0"
         :class="{
-          'scale-[5]': isCursorPointer,
-          'opacity-20': moved,
+          'scale-[5] !opacity-20': isCursorPointer,
+          'opacity-80': moved,
         }"
         ref="cursor"
       ></div>
@@ -26,7 +29,6 @@
 </template>
 
 <script setup lang="ts">
-const mounted = ref(false);
 const m = useState("mounted", () => false);
 const route = useRoute();
 
@@ -40,7 +42,6 @@ let moved = ref(false);
 const usedTouch = ref(false);
 
 onMounted(() => {
-  mounted.value = true;
   if (route.name != "index") {
     m.value = true;
   }

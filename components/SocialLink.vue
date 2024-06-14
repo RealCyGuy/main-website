@@ -1,15 +1,3 @@
-<!-- <template>
-  <NuxtLink :to="to" class="flex py-1 px-3 items-center" target="_blank">
-    <img :src="icons[icon]" alt="" class="w-8 h-8 object-contain mr-3">
-    <div class="flex flex-col text-sm">
-      <span class="font-bold">{{ title }}</span>
-      <span>
-        <span v-if="prefix" class="opacity-90">{{ prefix }}</span>
-        <span>{{ username }}</span>
-      </span>
-    </div>
-  </NuxtLink>
-</template> -->
 <template>
   <div class="social-link flex py-1 items-center relative opacity-0">
     <NuxtLink
@@ -34,7 +22,7 @@ import { filename } from "pathe/utils";
 
 const glob = import.meta.glob("~/assets/icons/*", { eager: true });
 const icons = Object.fromEntries(
-  Object.entries(glob).map(([key, value]) => [filename(key), value.default])
+  Object.entries(glob).map(([key, value]) => [filename(key), value.default]),
 );
 
 defineProps<{

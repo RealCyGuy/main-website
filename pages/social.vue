@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="auto-mx">
     <h1 class="title mb-5">Social</h1>
     <h2 class="mb-5">
       Here are some links. Categories:
@@ -149,10 +149,33 @@ useHead({
   title: "Social",
 });
 
-useServerSeoMeta({
+useSeoMeta({
   description:
     "Links to Cyrus Yip's social media and developer profiles. Includes GitHub, Stack Overflow, and more.",
 });
 
-onMounted(animateSocial);
+const { $gsap, $ScrollTrigger } = useNuxtApp();
+
+onMounted(() => {
+  handleAnimation();
+  $gsap.to("h3", { opacity: 1, duration: 0.5, delay: 0.5 });
+  $ScrollTrigger.batch(".social-link", {
+    onEnter: (batch) => {
+      $gsap.fromTo(
+        batch,
+        {
+          opacity: 0,
+          y: 20,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          stagger: 0.1,
+          delay: 0.2,
+        },
+      );
+    },
+  });
+});
 </script>

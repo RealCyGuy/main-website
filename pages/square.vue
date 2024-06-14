@@ -1,7 +1,7 @@
 <template>
-  <div class="pb-10">
+  <div class="auto-mx">
     <h1 class="title mb-5">Square<span class="font-normal">?</span></h1>
-    <div class="mt-10 mb-14 flex justify-between flex-wrap gap-y-5">
+    <div class="mt-10 flex justify-between flex-wrap gap-y-5">
       <p class="text-xl sm:text-2xl flex flex-col">
         <span class="mb-2">Here is a spinning square:</span>
         <span
@@ -34,10 +34,16 @@
           :class="clicks < 720 ? 'max-h-0' : 'max-h-16'"
           >Why are you still clicking.</span
         >
+        <span
+          class="inline-block overflow-hidden duration-[2000ms] transition-[max-height]"
+          v-if="clicks > 799"
+          v-for="click in Math.floor((clicks - 700) / 100)"
+          >{{ "?".repeat(click) }}</span
+        >
       </p>
       <div class="flex-1 px-8">
         <div
-          class="bg-pink-400 w-1/6 min-w-[5rem] max-w-[8rem] aspect-square m-5 animate-spin-slow mx-auto cursor-pointer relative overflow-hidden [-webkit-tap-highlight-color:transparent]"
+          class="bg-primary w-1/6 min-w-[5rem] max-w-[8rem] aspect-square m-5 animate-spin-slow mx-auto cursor-pointer relative overflow-hidden [-webkit-tap-highlight-color:transparent]"
           @click="click"
           :style="`filter: hue-rotate(${degrees}deg)`"
         >
@@ -62,7 +68,7 @@ useHead({
   title: "Square",
 });
 
-useServerSeoMeta({
+useSeoMeta({
   description: "A spinning square?",
 });
 
@@ -109,4 +115,6 @@ function click(event: MouseEvent) {
     waves.value.shift();
   }, 3000);
 }
+
+onMounted(handleAnimation);
 </script>
