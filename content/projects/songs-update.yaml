@@ -1,0 +1,7 @@
+title: songs-update
+description: Old GitHub action that backups a YouTube playlist to Redis and posts updates to a Discord webhook, replaced by [songs-backup](/projects#songs-backup).
+tags: [Javascript, GitHub Actions, Redis]
+date: 2021-12-07
+links:
+  github: realcyguy/songs-update
+status: 2

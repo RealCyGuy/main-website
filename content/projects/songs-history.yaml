@@ -1,0 +1,7 @@
+title: songs-history
+description: CLI program to parse Git history into a changelog for my YouTube playlist.
+tags: [Rust, clap, git2]
+date: 2024-04-10
+links:
+  github: realcyguy/songs-history
+status: 1

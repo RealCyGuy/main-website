@@ -1,0 +1,8 @@
+title: auth-test
+description: Simple website to test several OAuth providers.
+tags: [HTML, CSS, Typescript, Nuxt, Tailwind CSS, Vue]
+date: 2024-04-22
+links:
+  website: https://auth.cyrusyip.com
+  github: realcyguy/auth-test
+status: 1

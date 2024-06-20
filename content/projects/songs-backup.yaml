@@ -1,0 +1,6 @@
+title: songs-backup
+description: GitHub action that automatically backups a YouTube song playlist and posts to a Discord webhook, replacing [songs-update](/projects#songs-update).
+tags: [Python, GitHub Actions]
+date: 2022-09-13
+links:
+  github: realcyguy/songs-backup
