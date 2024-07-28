@@ -288,6 +288,27 @@ onMounted(() => {
   app
     .load("https://prod.spline.design/SF3SvGwvtSuhzyIm/scene.splinecode")
     .then(() => {
+      let mm = $gsap.matchMedia();
+      mm.add({ big: "(min-width: 768px)" }, (context) => {
+        $gsap.to("#canvas3d", {
+          x: context!.conditions!.big ? "-25%" : "0%",
+          scrollTrigger: {
+            trigger: ".intro-text",
+            start: "bottom 60%",
+            end: "bottom 20%",
+            scrub: 0.5,
+          },
+        });
+      });
+      $gsap.to("#canvas3d", {
+        scale: 0.5,
+        scrollTrigger: {
+          trigger: ".intro-text",
+          start: "top 50%",
+          end: "bottom 50%",
+          scrub: true,
+        },
+      });
       $gsap.to(canvas, { opacity: 1, duration: 0.5, delay: 0.5 }).then(() => {
         $gsap.to("#canvas3d", {
           opacity: 0.8,
@@ -297,27 +318,6 @@ onMounted(() => {
             end: "top top",
             scrub: true,
           },
-        });
-        $gsap.to("#canvas3d", {
-          scale: 0.5,
-          scrollTrigger: {
-            trigger: ".intro-text",
-            start: "top 50%",
-            end: "bottom 50%",
-            scrub: true,
-          },
-        });
-        let mm = $gsap.matchMedia();
-        mm.add({ big: "(min-width: 768px)" }, (context) => {
-          $gsap.to("#canvas3d", {
-            x: context!.conditions!.big ? "-25%" : "0%",
-            scrollTrigger: {
-              trigger: ".intro-text",
-              start: "bottom 60%",
-              end: "bottom 20%",
-              scrub: 0.5,
-            },
-          });
         });
       });
     });
