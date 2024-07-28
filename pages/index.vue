@@ -130,6 +130,25 @@
               <SkillLink to="https://tenacityaudio.org">Tenacity</SkillLink>
             </p>
           </div>
+          <div class="flex flex-col">
+            <span class="pb-5 lg:pb-7 text-2xl md:text-4xl"
+              >Open-source contribution</span
+            >
+            <p class="md:text-2xl">
+              <SkillLink
+                to="https://github.com/modmail-dev/Modmail/issues?q=author%3Arealcyguy+is%3Ap"
+                >modmail-dev/Modmail</SkillLink
+              >,
+              <SkillLink
+                to="https://github.com/monkeytypegame/monkeytype/issues?q=author%3Arealcyguy+is%3Apr"
+                >monkeytypegame/monkeytype</SkillLink
+              >,
+              <SkillLink
+                to="https://github.com/search?q=author%3Arealcyguy++-owner%3Arealcyguy+&type=pullrequests"
+                >more</SkillLink
+              >!
+            </p>
+          </div>
         </div>
       </section>
       <!-- <div class="h-screen"></div> -->
