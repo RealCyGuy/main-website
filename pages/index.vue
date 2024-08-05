@@ -36,14 +36,14 @@
           </div>
         </div>
       </section>
-      <section class="py-24 md:py-32 auto-mx mr-10">
+      <section class="py-12 sm:py-24 md:py-32 auto-mx mr-10">
         <Split
           text="I was born at a very, very young age. In fact, I was one of the youngest living things during that time."
           class="intro-text text-5xl sm:text-7xl md:text-8xl lg:text-[10rem] flex-1 max-w-screen-2xl leading-none gap-x-4 md:gap-x-6 lg:gap-x-10"
         />
       </section>
       <section
-        class="skills auto-mx flex flex-wrap gap-y-4 justify-between pb-24"
+        class="skills auto-mx flex flex-wrap gap-y-4 justify-between pb-24 text-sm sm:text-base lg:text-lg"
       >
         <div
           class="w-full sm:w-[40%] md:w-[35%] flex flex-col gap-y-4 lg:gap-5"
