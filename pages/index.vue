@@ -39,125 +39,96 @@
       <section class="py-24 md:py-32 auto-mx mr-10">
         <Split
           text="I was born at a very, very young age. In fact, I was one of the youngest living things during that time."
-          class="intro-text text-5xl sm:text-8xl md:text-9xl lg:text-[10rem] flex-1 max-w-screen-2xl leading-none gap-x-4 sm:gap-x-10"
+          class="intro-text text-5xl sm:text-7xl md:text-8xl lg:text-[10rem] flex-1 max-w-screen-2xl leading-none gap-x-4 md:gap-x-6 lg:gap-x-10"
         />
       </section>
       <section
-        class="skills auto-mx flex flex-wrap gap-y-10 lg:gap-y-20 justify-between pb-24"
+        class="skills auto-mx flex flex-wrap gap-y-4 justify-between pb-24"
       >
-        <div class="sm:w-[35%] flex flex-col gap-y-10 lg:gap-20">
-          <div class="flex flex-col">
-            <span class="pb-5 lg:pb-7 text-2xl md:text-4xl"
-              >Web development</span
+        <div
+          class="w-full sm:w-[40%] md:w-[35%] flex flex-col gap-y-4 lg:gap-5"
+        >
+          <SkillSection title="Web development">
+            <SkillLink to="https://nuxt.com">Nuxt</SkillLink>,
+            <SkillLink to="https://vuejs.org">Vue.js</SkillLink>,
+            <SkillLink to="https://gsap.com">GSAP</SkillLink>,
+            <SkillLink to="https://tailwindcss.com">Tailwind CSS</SkillLink>,
+            <SkillLink to="https://en.wikipedia.org/wiki/HTML">HTML</SkillLink>,
+            <SkillLink to="https://en.wikipedia.org/wiki/CSS">CSS</SkillLink>,
+            <SkillLink to="https://en.wikipedia.org/wiki/JavaScript"
+              >JavaScript</SkillLink
+            >,
+            <SkillLink to="https://www.typescriptlang.org/"
+              >TypeScript</SkillLink
             >
-            <p class="md:text-2xl">
-              <SkillLink to="https://nuxt.com">Nuxt</SkillLink>,
-              <SkillLink to="https://vuejs.org">Vue.js</SkillLink>,
-              <SkillLink to="https://gsap.com">GSAP</SkillLink>,
-              <SkillLink to="https://tailwindcss.com">Tailwind CSS</SkillLink>,
-              <SkillLink to="https://en.wikipedia.org/wiki/HTML">HTML</SkillLink
-              >,
-              <SkillLink to="https://en.wikipedia.org/wiki/CSS">CSS</SkillLink>,
-              <SkillLink to="https://en.wikipedia.org/wiki/JavaScript"
-                >JavaScript</SkillLink
-              >,
-              <SkillLink to="https://www.typescriptlang.org/"
-                >TypeScript</SkillLink
-              >
-            </p>
-          </div>
-          <div class="flex flex-col">
-            <span class="pb-5 lg:pb-7 text-2xl md:text-4xl"
-              >Bot development</span
+          </SkillSection>
+          <SkillSection title="Bot development">
+            <SkillLink to="https://www.python.org">Python</SkillLink>,
+            <SkillLink to="https://discordpy.readthedocs.io/en/stable/"
+              >discord.py</SkillLink
+            >, <SkillLink to="https://pycord.dev/">pycord</SkillLink>,
+            <SkillLink to="https://www.mongodb.com">MongoDB</SkillLink>,
+            <SkillLink to="https://github.com/tesseract-ocr/tesseract"
+              >Tesseract OCR</SkillLink
             >
-            <p class="md:text-2xl">
-              <SkillLink to="https://www.python.org">Python</SkillLink>,
-              <SkillLink to="https://discordpy.readthedocs.io/en/stable/"
-                >discord.py</SkillLink
-              >, <SkillLink to="https://pycord.dev/">pycord</SkillLink>,
-              <SkillLink to="https://www.mongodb.com">MongoDB</SkillLink>,
-              <SkillLink to="https://github.com/tesseract-ocr/tesseract"
-                >Tesseract OCR</SkillLink
-              >
-            </p>
-          </div>
-          <div class="flex flex-col">
-            <span class="pb-5 lg:pb-7 text-2xl md:text-4xl"
-              >Game development</span
-            >
-            <p class="md:text-2xl">
-              <SkillLink to="https://godotengine.org">Godot</SkillLink>,
-              <SkillLink
-                to="https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html"
-                >GDScript</SkillLink
-              >, <SkillLink to="https://unity.com">Unity</SkillLink>,
-              <SkillLink to="https://aseprite.org">Aseprite</SkillLink>
-            </p>
-          </div>
-          <div class="flex flex-col">
-            <span class="pb-5 lg:pb-7 text-2xl md:text-4xl"
-              >Script development</span
-            >
-            <p class="md:text-2xl">
-              <SkillLink to="https://www.rust-lang.org">Rust</SkillLink>,
-              <SkillLink to="https://www.autohotkey.com">AutoHotkey</SkillLink>
-            </p>
-          </div>
+          </SkillSection>
+          <SkillSection title="Game development">
+            <SkillLink to="https://godotengine.org">Godot</SkillLink>,
+            <SkillLink
+              to="https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html"
+              >GDScript</SkillLink
+            >, <SkillLink to="https://unity.com">Unity</SkillLink>,
+            <SkillLink to="https://aseprite.org">Aseprite</SkillLink>
+          </SkillSection>
+          <SkillSection title="Script development">
+            <SkillLink to="https://www.rust-lang.org">Rust</SkillLink>,
+            <SkillLink to="https://www.autohotkey.com">AutoHotkey</SkillLink>
+          </SkillSection>
         </div>
-        <div class="sm:w-[35%] flex flex-col gap-y-10 lg:gap-20">
-          <div class="flex flex-col">
-            <span class="pb-5 lg:pb-7 text-2xl md:text-4xl">Automation</span>
-            <p class="md:text-2xl">
-              <SkillLink to="https://www.git-scm.com">Git</SkillLink>,
-              <SkillLink to="https://github.com/features/actions"
-                >GitHub Actions</SkillLink
-              >,
-            </p>
-          </div>
-          <div class="flex flex-col">
-            <span class="pb-5 lg:pb-7 text-2xl md:text-4xl">Web design</span>
-            <p class="md:text-2xl">
-              <SkillLink to="https://figma.com">Figma</SkillLink>
-            </p>
-          </div>
-          <div class="flex flex-col">
-            <span class="pb-5 lg:pb-7 text-2xl md:text-4xl">Media editing</span>
-            <p class="md:text-2xl">
-              <SkillLink
-                to="https://www.blackmagicdesign.com/ca/products/davinciresolve"
-                >DaVinci Resolve</SkillLink
-              >,
-              <SkillLink to="https://tenacityaudio.org">Tenacity</SkillLink>
-            </p>
-          </div>
-          <div class="flex flex-col">
-            <span class="pb-5 lg:pb-7 text-2xl md:text-4xl"
-              >Open-source contribution</span
+        <div
+          class="w-full sm:w-[40%] md:w-[35%] flex flex-col gap-y-4 lg:gap-5"
+        >
+          <SkillSection title="Automation">
+            <SkillLink to="https://www.git-scm.com">Git</SkillLink>,
+            <SkillLink to="https://github.com/features/actions"
+              >GitHub Actions</SkillLink
             >
-            <p class="md:text-2xl">
-              <SkillLink
-                to="https://github.com/modmail-dev/Modmail/issues?q=author%3Arealcyguy+is%3Ap"
-                >modmail-dev/Modmail</SkillLink
-              >,
-              <SkillLink
-                to="https://github.com/monkeytypegame/monkeytype/issues?q=author%3Arealcyguy+is%3Apr"
-                >monkeytypegame/monkeytype</SkillLink
-              >,
-              <SkillLink
-                to="https://github.com/search?q=author%3Arealcyguy++-owner%3Arealcyguy+&type=pullrequests"
-                >more</SkillLink
-              >!
-            </p>
-          </div>
+          </SkillSection>
+          <SkillSection title="Web design">
+            <SkillLink to="https://figma.com">Figma</SkillLink>
+          </SkillSection>
+          <SkillSection title="Media editing">
+            <SkillLink
+              to="https://www.blackmagicdesign.com/ca/products/davinciresolve"
+              >DaVinci Resolve</SkillLink
+            >,
+            <SkillLink to="https://tenacityaudio.org">Tenacity</SkillLink>
+          </SkillSection>
+          <SkillSection title="Open-source contribution">
+            <SkillLink
+              to="https://github.com/modmail-dev/Modmail/issues?q=author%3Arealcyguy+is%3Ap"
+              >modmail-dev/Modmail</SkillLink
+            >,
+            <SkillLink
+              to="https://github.com/monkeytypegame/monkeytype/issues?q=author%3Arealcyguy+is%3Apr"
+              >monkeytypegame/monkeytype</SkillLink
+            >,
+            <SkillLink
+              to="https://github.com/search?q=author%3Arealcyguy++-owner%3Arealcyguy+&type=pullrequests"
+              >more</SkillLink
+            >!
+          </SkillSection>
         </div>
       </section>
-      <!-- <div class="h-screen"></div> -->
     </div>
-    <section class="wide relative auto-mx">
-      <div class="w-full h-full border-2 rounded-xl p-5 sm:p-5 md:p-10 lg:p-16">
-        <span class="text-lg md:text-2xl"
-          >Here are 4 random selections of projects I've created.</span
-        >
+    <section class="relative border-t-2">
+      <div class="my-12 lg:my-20 auto-mx">
+        <Split
+          text="Here are four random selections of projects I've created."
+          class="projects-text text-5xl sm:text-7xl md:text-8xl lg:text-[10rem] flex-1 max-w-screen-2xl leading-none gap-x-4 md:gap-x-6 lg:gap-x-10"
+        />
+      </div>
+      <div class="auto-mx pb-10">
         <div
           class="text-sm sm:text-base lg:text-lg grid 2xl:grid-cols-2 gap-2 my-5 md:my-10"
         >
@@ -283,6 +254,18 @@ onMounted(() => {
     stagger: 0.1,
     scrollTrigger: {
       trigger: ".intro-text",
+      start: "top bottom",
+      end: "bottom 80%",
+      scrub: true,
+    },
+  });
+
+  $gsap.from(".projects-text span", {
+    y: "50%",
+    opacity: 0,
+    stagger: 0.1,
+    scrollTrigger: {
+      trigger: ".projects-text",
       start: "top bottom",
       end: "bottom 80%",
       scrub: true,
