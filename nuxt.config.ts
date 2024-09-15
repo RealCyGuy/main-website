@@ -5,7 +5,7 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxtjs/google-fonts",
     "@formkit/nuxt",
-    "nuxt-icon",
+    "@nuxt/icon",
     "@nuxtjs/seo",
     "@hypernym/nuxt-gsap",
   ],
