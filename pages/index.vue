@@ -121,8 +121,8 @@
         </div>
       </section>
     </div>
-    <section class="relative border-t-2">
-      <div class="my-12 lg:my-20 auto-mx">
+    <section class="relative bg-blue-950 bg-opacity-20 py-10 md:py-20">
+      <div class="mb-12 lg:mb-20 auto-mx">
         <Split
           text="Here are four random selections of projects I've created."
           class="projects-text text-5xl sm:text-7xl md:text-8xl lg:text-[10rem] flex-1 max-w-screen-2xl leading-none gap-x-4 md:gap-x-6 lg:gap-x-10"
@@ -167,6 +167,14 @@
         <SimpleLink to="/projects" class="text-lg md:text-2xl"
           >View all {{ projects.length }} projects.</SimpleLink
         >
+      </div>
+    </section>
+    <section class="min-h-screen flex justify-center items-center">
+      <div class="auto-mx">
+        <Split
+          text="Why do people choose to sleep? I think... It is because they're afraid to awaken from the dream."
+          class="end-text text-3xl flex-1 max-w-screen-2xl leading-none gap-x-2"
+        />
       </div>
     </section>
   </div>
@@ -268,6 +276,18 @@ onMounted(() => {
       trigger: ".projects-text",
       start: "top bottom",
       end: "bottom 80%",
+      scrub: true,
+    },
+  });
+
+  $gsap.from(".end-text span", {
+    y: "50%",
+    opacity: 0,
+    stagger: 0.1,
+    scrollTrigger: {
+      trigger: ".end-text",
+      start: "top bottom",
+      end: "top 50%",
       scrub: true,
     },
   });
