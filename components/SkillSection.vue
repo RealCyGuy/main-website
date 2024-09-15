@@ -1,11 +1,13 @@
 <template>
-  <div
-    class="flex flex-col bg-text bg-opacity-95 text-background rounded-xl px-8 py-6 sm:p-5 md:p-6 lg:p-10 xl:p-12"
-  >
-    <span class="pb-5 lg:pb-7 font-bold">{{ title }}</span>
-    <p class="">
-      <slot />
-    </p>
+  <div class="border border-opacity-60 border-text px-10 py-8 xl:p-14">
+    <div class="flex flex-col text-center">
+      <span class="pb-5 lg:pb-5 text-lg sm:text-xl lg:text-2xl">{{
+        title
+      }}</span>
+      <p class="text-balance">
+        <slot />
+      </p>
+    </div>
   </div>
 </template>
 

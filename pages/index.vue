@@ -46,7 +46,7 @@
         class="skills auto-mx flex flex-wrap gap-y-4 justify-between pb-24 text-sm sm:text-base lg:text-lg"
       >
         <div
-          class="w-full sm:w-[40%] md:w-[35%] flex flex-col gap-y-4 lg:gap-5"
+          class="w-full sm:w-[45%] md:w-[40%] flex flex-col gap-y-4 lg:gap-5"
         >
           <SkillSection title="Web development">
             <SkillLink to="https://nuxt.com">Nuxt</SkillLink>,
@@ -86,7 +86,7 @@
           </SkillSection>
         </div>
         <div
-          class="w-full sm:w-[40%] md:w-[35%] flex flex-col gap-y-4 lg:gap-5"
+          class="w-full sm:w-[45%] md:w-[40%] flex flex-col gap-y-4 lg:gap-5"
         >
           <SkillSection title="Automation">
             <SkillLink to="https://www.git-scm.com">Git</SkillLink>,
@@ -272,12 +272,11 @@ onMounted(() => {
     },
   });
 
-  $gsap.utils.toArray(".skills>div>div").forEach((el) => {
+  $gsap.utils.toArray(".skills>div>div>div").forEach((el) => {
     $gsap.from(el as HTMLElement, {
-      y: "50%",
       opacity: 0,
-      duration: 1.8,
-      ease: "elastic.out(1, 0.5)",
+      duration: 1,
+      delay: 0.3,
       scrollTrigger: {
         trigger: el as HTMLElement,
         start: "top bottom",

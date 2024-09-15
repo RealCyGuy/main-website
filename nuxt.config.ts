@@ -9,9 +9,11 @@ export default defineNuxtConfig({
     "@nuxtjs/seo",
     "@hypernym/nuxt-gsap",
   ],
+
   googleFonts: {
     families: { "Hanken+Grotesk": [400, 700, 900] },
   },
+
   app: {
     head: {
       link: [
@@ -41,11 +43,14 @@ export default defineNuxtConfig({
     },
     pageTransition: { name: "page", mode: "out-in" },
   },
+
   site: {
     url: "https://cyrusyip.com",
     name: "Cyrus Yip",
     defaultLocale: "en",
   },
+
   devtools: { enabled: true },
   gsap: { extraPlugins: { scrollTrigger: true, flip: true, text: true } },
+  compatibilityDate: "2024-09-15",
 });
