@@ -36,7 +36,7 @@
           </div>
         </div>
       </section>
-      <section class="py-12 sm:py-24 md:py-32 auto-mx mr-10">
+      <section class="py-16 sm:py-24 md:py-32 auto-mx mr-10">
         <Split
           text="I was born at a very, very young age. In fact, I was one of the youngest living things during that time."
           class="intro-text text-5xl sm:text-7xl md:text-8xl lg:text-[10rem] flex-1 max-w-screen-2xl leading-none gap-x-4 md:gap-x-6 lg:gap-x-10"
@@ -121,7 +121,7 @@
         </div>
       </section>
     </div>
-    <section class="relative bg-blue-950 bg-opacity-20 py-10 md:py-20">
+    <section class="relative bg-blue-950 bg-opacity-20 py-20">
       <div class="mb-12 lg:mb-20 auto-mx">
         <Split
           text="Here are four random selections of projects I've created."
