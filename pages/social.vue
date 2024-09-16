@@ -6,7 +6,10 @@
       <SimpleLink to="#developer_things">developer things</SimpleLink>,
       <SimpleLink to="#interests">interests</SimpleLink>,
       <span class="whitespace-nowrap">
-        <SimpleLink to="#social_media">social media</SimpleLink>.
+        <SimpleLink to="#social_media">social media</SimpleLink>,
+      </span>
+      <span class="whitespace-nowrap">
+        <SimpleLink to="#video_games">video games</SimpleLink>.
       </span>
     </h2>
     <SocialSection title="Developer things">
@@ -105,12 +108,6 @@
         icon="anilist"
         prefix="@"
       />
-      <SocialLink
-        to="https://www.speedrun.com/users/RealCyGuy"
-        title="Speedrun.com"
-        username="realcyguy"
-        icon="speedruncom"
-      />
     </SocialSection>
     <SocialSection title="Social media">
       <SocialLink
@@ -139,6 +136,67 @@
         title="LinkedIn"
         username="cyrusyip"
         icon="linkedin"
+      />
+    </SocialSection>
+    <SocialSection title="Video games">
+      <SocialLink
+        to="https://www.speedrun.com/users/RealCyGuy"
+        title="Speedrun.com"
+        username="RealCyGuy"
+        icon="speedruncom"
+      />
+      <SocialLink
+        to="https://steamcommunity.com/id/realcyguy/"
+        title="Steam"
+        username="realcyguy"
+        icon="steam"
+      />
+      <SocialLink
+        to="https://osu.ppy.sh/users/19364518"
+        title="osu!"
+        username="realcyguy"
+        icon="osu"
+      />
+      <SocialLink
+        to="https://tactics.tools/player/na/RealCyGuy/WOW"
+        title="Teamfight Tactics"
+        username="RealCyGuy#WOW"
+        icon="tft"
+      />
+      <SocialLink
+        to="https://enka.network/hsr/603443123/"
+        title="Honkai: Star Rail"
+        username="603443123"
+        icon="hsr"
+        :rounded="true"
+      />
+      <SocialLink
+        to="https://brawlify.com/stats/profile/2Y0JG282"
+        title="Brawl Stars"
+        username="2Y0JG282"
+        icon="brawlstars"
+        prefix="#"
+        :rounded="true"
+      />
+      <SocialLink
+        to="https://tracker.gg/valorant/profile/riot/RealCyGuy%23WOW/overview"
+        title="Valorant"
+        username="RealCyGuy#WOW"
+        icon="valorant"
+      />
+      <SocialLink
+        to="https://enka.network/u/636725875/"
+        title="Genshin Impact"
+        username="636725875"
+        icon="genshinimpact"
+        :rounded="true"
+      />
+      <SocialLink
+        to="https://fortnitetracker.com/profile/all/Sync%20Airplane"
+        title="Fortnite"
+        username="Sync Airplane"
+        icon="fortnite"
+        :rounded="true"
       />
     </SocialSection>
   </div>
