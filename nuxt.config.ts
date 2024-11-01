@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxtjs/seo",
     "@hypernym/nuxt-gsap",
+    "nuxt-gtag",
   ],
 
   googleFonts: {

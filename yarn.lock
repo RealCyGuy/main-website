@@ -5510,6 +5510,16 @@ nuxi@^3.13.1:
   optionalDependencies:
     fsevents "~2.3.3"
 
+nuxt-gtag@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/nuxt-gtag/-/nuxt-gtag-3.0.1.tgz#b027f7dda0ff1819529cf42b75d32c2d818ce6f9"
+  integrity sha512-dfDeL8JwvwdCddlSBXqofEVdoONVZ5yqztqoiUs+4fEL+QfAAHtK+3MaLyEVO4keZuiyVQs6XPUJyR7afTVXNg==
+  dependencies:
+    "@nuxt/kit" "^3.13.0"
+    defu "^6.1.4"
+    pathe "^1.1.2"
+    ufo "^1.5.4"
+
 nuxt-link-checker@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/nuxt-link-checker/-/nuxt-link-checker-3.1.1.tgz#c4d219e0449ec846ceb5d1c343fe7dfa0c65c9f0"
