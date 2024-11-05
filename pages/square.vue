@@ -6,18 +6,23 @@
         <span class="mb-2">Here is a spinning square:</span>
         <span
           class="inline-block overflow-hidden duration-[2000ms] transition-[max-height]"
-          :class="clicks < 10 ? 'max-h-0' : 'max-h-16'"
+          :class="clicks < 5 ? 'max-h-0' : 'max-h-16'"
           >Clicks: {{ clicks }}</span
         >
         <span
           class="inline-block overflow-hidden duration-[2000ms] transition-[max-height]"
-          :class="clicks < 50 ? 'max-h-0' : 'max-h-16'"
+          :class="clicks < 20 ? 'max-h-0' : 'max-h-16'"
           >Clicks per second (last 10): {{ cps.toFixed(2) }}</span
         >
         <span
           class="inline-block overflow-hidden duration-[2000ms] transition-[max-height]"
-          :class="clicks < 100 ? 'max-h-0' : 'max-h-16'"
+          :class="clicks < 50 ? 'max-h-0' : 'max-h-16'"
           >Average clicks per second: {{ averageCps.toFixed(2) }}</span
+        >
+        <span
+          class="inline-block overflow-hidden duration-[2000ms] transition-[max-height]"
+          :class="clicks < 100 ? 'max-h-0' : 'max-h-16'"
+          >Time spent clicking: {{ (now - beginning) / 1000 }}s</span
         >
         <span
           class="inline-block overflow-hidden duration-[2000ms] transition-[max-height]"
@@ -80,6 +85,7 @@ let loops = 0;
 let cps = 0;
 const clickTimes: number[] = [];
 let beginning: number;
+let now: number;
 let averageCps = 0;
 
 function click(event: MouseEvent) {
@@ -98,8 +104,9 @@ function click(event: MouseEvent) {
     clicks++,
   ]);
 
+  now = Date.now();
   if (!beginning) {
-    beginning = Date.now();
+    beginning = now;
   }
 
   clickTimes.push(Date.now());
@@ -114,6 +121,10 @@ function click(event: MouseEvent) {
   setTimeout(() => {
     waves.value.shift();
   }, 3000);
+
+  // setTimeout(() => {
+  //   click(event);
+  // }, 50);
 }
 
 onMounted(handleAnimation);
