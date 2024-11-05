@@ -1,6 +1,7 @@
 # Cyrus Yip's Personal Website
 
-Version 4 of my website is built with Nuxt 3, Tailwind CSS, and Netlify Forms.
+Version 4 of my website is built with Nuxt 3, Tailwind CSS, and Netlify Forms.  
+I also used GSAP, Nuxt Content, Spline, Formkit, and Lenis.
 
 You can view the site at [v4--realcyguy.netlify.app](https://v4--realcyguy.netlify.app/).
 
