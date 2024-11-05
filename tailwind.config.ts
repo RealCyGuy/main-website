@@ -17,6 +17,12 @@ export default <Partial<Config>>{
         primary: "#446ada",
         "primary-bright": "#82a2ff",
       },
+      screens: {
+        xs: "400px",
+        "footer-sm": { raw: "((min-width: 640px) and (min-height: 900px))" },
+        "footer-md": { raw: "((min-width: 768px) and (min-height: 900px))" },
+        "footer-lg": { raw: "((min-width: 1024px) and (min-height: 900px))" },
+      },
     },
   },
   plugins: [formKitTailwind],
