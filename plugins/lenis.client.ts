@@ -1,6 +1,6 @@
 import Lenis from "lenis";
 
-export default defineNuxtPlugin((nuxtApp) => {
+export default defineNuxtPlugin((nuxtApp: any) => {
   const lenis = new Lenis();
 
   lenis.on("scroll", nuxtApp.$ScrollTrigger.update);

@@ -133,7 +133,7 @@
           class="text-sm sm:text-base lg:text-lg grid 2xl:grid-cols-2 gap-2 my-5 md:my-10"
         >
           <div
-            v-for="project in projects.slice(0, 4)"
+            v-for="project in projects!.slice(0, 4)"
             class="flex flex-col py-2 gap-1"
           >
             <span>
@@ -165,7 +165,7 @@
           </div>
         </div>
         <SimpleLink to="/projects" class="text-lg md:text-2xl"
-          >View all {{ projects.length }} projects.</SimpleLink
+          >View all {{ projects!.length }} projects.</SimpleLink
         >
       </div>
     </section>
